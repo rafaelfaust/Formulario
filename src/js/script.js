@@ -6,12 +6,12 @@ function validarFormulario(event) {
   
     camposObrigatorios.forEach((campo, index) => {
       if (campo.value.trim() === "") {
-        campo.classList.remove("tudoOk");
-        campo.classList.add("nadaOk");
+        campo.classList.remove("bordaGreen");
+        campo.classList.add("bordaRed");
         avisosCamposObrigatorios[index].classList.remove("oculto");
       } else {
-        campo.classList.remove("nadaOk");
-        campo.classList.add("tudoOk");
+        campo.classList.remove("bordaRed");
+        campo.classList.add("bordaGreen");
         avisosCamposObrigatorios[index].classList.add("oculto");
       }
     });
@@ -25,12 +25,12 @@ function validarFormulario(event) {
   campos.forEach((campo) => {
     campo.addEventListener("keyup", () => {
       if (campo.value.trim() !== "") {
-        campo.classList.remove("nadaOk");
-        campo.classList.add("tudoOk");
+        campo.classList.remove("bordaRed");
+        campo.classList.add("bordaGreen");
         campo.nextElementSibling.classList.add("oculto");
       } else {
-        campo.classList.remove("tudoOk");
-        campo.classList.add("nadaOk");
+        campo.classList.remove("bordaGreen");
+        campo.classList.add("bordaRed");
         campo.style.borderColor = "initial";
       }
     });

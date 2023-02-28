@@ -18,13 +18,25 @@ body {
 }
 
 .itens {
-    width: 500px;
+    width: 450px;
     margin-right: 72px;
     color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
 }
 
 .itens h1 {
     margin-bottom: 10px;
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 30px;
+}
+
+.itens .paragrafo {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+    width: 450px;
 }
 
 .formulario {
@@ -36,7 +48,8 @@ body {
     flex-direction: column;
 }
 
-input {
+.campo,
+.mensagem {
     width: 298.01px;
     height: 35.11px;
     border: 1px solid #000000;
@@ -49,11 +62,7 @@ input {
     margin: 20px 20px 0;
 }
 
-.mensagem {
-    height: 100px;
-}
-
-.formulario .aviso{
+.formulario .aviso {
     font-weight: 400;
     font-size: 8px;
     line-height: 9px;
@@ -61,7 +70,16 @@ input {
     margin-left: 20px;
 }
 
-.formulario .obeservacao{
+.mensagem {
+    height: 100px;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+    color: #A8A8A8;
+    padding-top: 8px;
+}
+
+.formulario .obeservacao {
     margin: 7px 0 0 15px;
     font-weight: 400;
     font-size: 15px;
@@ -88,4 +106,46 @@ input {
 
 .oculto {
     opacity: 0;
+}
+
+.bordaRed {
+    border-color: red !important;
+}
+
+.bordaGreen {
+    border-color: green !important;
+}
+
+@media (max-width: 900px) {
+    .container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .formulario {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .itens {
+        margin-top: 50px;
+        text-align: center;
+        margin-right: 0;
+    }
+
+    .itens h1 {
+        font-size: 20px;
+        line-height: 23px;
+    }
+
+    .itens .paragrafo {
+        font-size: 15px;
+        line-height: 18px;
+    }
+
+    .mensagem {
+        height: 50px;
+    }
 }
